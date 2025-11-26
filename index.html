@@ -159,4 +159,113 @@
     </style>
 </head>
 
-<bod
+<body>
+    <header>
+        <h1>Lucas Joshua</h1>
+        <p>Diploma in Computer Engineering | Temasek Polytechnic</p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- main wrapper ADDED here -->
+    <main>
+
+        <section id="intro">
+            <h2>What I Do</h2>
+            <p class="intro-text">
+                I am a passionate technologist who thrives on building secure, reliable, and impactful solutions.
+                From designing intuitive applications to experimenting with cybersecurity and embedded systems,
+                I approach every challenge with curiosity, precision, and a drive to create meaningful work.
+            </p>
+
+            <div class="card-container">
+
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3>Cybersecurity & Ethical Hacking</h3>
+                    <p>Exploring vulnerabilities, analysing threats, and building defensive tools like honeypots
+                        to understand real-world attack behaviour.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Networking & Systems</h3>
+                    <p>Designing structured, scalable networks with Cisco Packet Tracer, configuring routing,
+                        VLANs, and security policies to build resilient infrastructures.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Embedded & IoT Development</h3>
+                    <p>Working with microcontrollers, sensors, and hardware interfaces to bring physical ideas
+                        to life through automation and smart systems.</p>
+                </div>
+
+            </div>
+
+            <p class="intro-text bottom">
+                I believe in learning by doing, experimenting boldly, and constantly improving.
+                My work is driven by curiosity, discipline, and the desire to build technology that is both
+                functional and impactful.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Basic Honeypot for Cyber Attack Monitoring</h3>
+                <p>
+                    A honeypot deployed in a Red Hat Linux environment to simulate a vulnerable service and observe
+                    simulated attack behaviour. It recorded connection attempts, suspicious commands, and unauthorized
+                    access patterns, providing insights into attacker techniques and network security monitoring.
+                </p>
+                <ul>
+                    <li>Configured in a Red Hat Linux environment.</li>
+                    <li>Captured and logged simulated malicious activity and access attempts.</li>
+                    <li>Analysed logs to understand attacker behaviour and improve monitoring.</li>
+                </ul>
+            </div>
+
+            <!-- Add more projects as you go -->
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: C/C++, Python, JavaScript</li>
+                <li>Web: HTML, CSS, JavaScript</li>
+                <li>Networking: Cisco Packet Tracer networking simulations</li>
+                <li>Ethical Hacking / Cybersecurity Fundamentals</li>
+                <li>Tools: Git, GitHub, Linux CLI, VS Code</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:lucasjenzhi@gmail.com">lucasjenzhi@gmail.com</a></p>
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/lucas-joshua-702456320" target="_blank" rel="noopener noreferrer">
+                    Lucas Joshua
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        © <span id="year"></span> Lucas Joshua. Built with GitHub Pages.
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
