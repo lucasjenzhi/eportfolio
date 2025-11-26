@@ -1,159 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Lucas Joshua | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Lucas Joshua | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Optional external CSS file if you create styles.css -->
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <!-- Optional external CSS file if you create styles.css -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
-    header {
-      padding: 2rem 10vw;
-      background: #020617;
-      border-bottom: 1px solid #1f2937;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 0.25rem 0 0;
-      color: #9ca3af;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin-right: 1rem;
-      text-decoration: none;
-      color: #93c5fd;
-      font-size: 0.95rem;
-    }
-    main {
-      padding: 2rem 10vw;
-      max-width: 900px;
-    }
-    section {
-      margin-bottom: 2.5rem;
-    }
-    h2 {
-      margin-bottom: 0.5rem;
-      font-size: 1.4rem;
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: 0.25rem;
-    }
-    .project {
-      border: 1px solid #1f2937;
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
-      background: #020617;
-    }
-    .project h3 {
-      margin-top: 0;
-      margin-bottom: 0.25rem;
-      font-size: 1.1rem;
-    }
-    .project a {
-      font-size: 0.9rem;
-      color: #93c5fd;
-    }
-    ul {
-      padding-left: 1.1rem;
-    }
-    a {
-      color: #93c5fd;
-    }
-    footer {
-      padding: 1.5rem 10vw 2.5rem;
-      font-size: 0.85rem;
-      color: #6b7280;
-      border-top: 1px solid #1f2937;
-      text-align: center;
-    }
-  </style>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            padding: 2rem 10vw;
+            background: #020617;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        header p {
+            margin: 0.25rem 0 0;
+            color: #9ca3af;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #93c5fd;
+            font-size: 0.95rem;
+        }
+
+        main {
+            padding: 2rem 10vw;
+            max-width: 900px;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 0.25rem;
+        }
+
+        .project {
+            border: 1px solid #1f2937;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            background: #020617;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+
+        .project a {
+            font-size: 0.9rem;
+            color: #93c5fd;
+        }
+
+        ul {
+            padding-left: 1.1rem;
+        }
+
+        a {
+            color: #93c5fd;
+        }
+
+        footer {
+            padding: 1.5rem 10vw 2.5rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            border-top: 1px solid #1f2937;
+            text-align: center;
+        }
+
+        /* Intro Section */
+        #intro {
+            margin-bottom: 3rem;
+        }
+
+        #intro h2 {
+            font-size: 1.6rem;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .intro-text.bottom {
+            margin-top: 2rem;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Cards */
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card h3 {
+            margin: 0.5rem 0;
+            color: #f1f5f9;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Lucas Joshua</h1>
-    <p>Diploma in Computer Engineering | Temasek Polytechnic</p>
+    <header>
+        <h1>Lucas Joshua</h1>
+        <p>Diploma in Computer Engineering | Temasek Polytechnic</p>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a student pursuing a Diploma in Computer Engineering at Temasek Polytechnic.
-        I enjoy working on projects related to web development, networking, embedded systems,
-        and cybersecurity. This portfolio showcases some of my work and interests.
-      </p>
+    <section id="intro">
+        <h2>What I Do</h2>
+        <p class="intro-text">
+            I’m a passionate technologist who thrives on building secure, reliable, and impactful solutions.
+            From designing intuitive applications to experimenting with cybersecurity and embedded systems,
+            I approach every challenge with curiosity, precision, and a drive to create meaningful work.
+        </p>
+
+        <div class="card-container">
+
+            <div class="card">
+                <div class="card-icon">🔐</div>
+                <h3>Cybersecurity & Ethical Hacking</h3>
+                <p>Exploring vulnerabilities, analysing threats, and building defensive tools like honeypots
+                    to understand real-world attack behaviour.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Networking & Systems</h3>
+                <p>Designing structured, scalable networks with Cisco Packet Tracer, configuring routing,
+                    VLANs, and security policies to build resilient infrastructures.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚙️</div>
+                <h3>Embedded & IoT Development</h3>
+                <p>Working with microcontrollers, sensors, and hardware interfaces to bring physical ideas
+                    to life through automation and smart systems.</p>
+            </div>
+
+        </div>
+
+        <p class="intro-text bottom">
+            I believe in learning by doing, experimenting boldly, and constantly improving.
+            My work is driven by curiosity, discipline, and the desire to build technology that is both
+            functional and impactful.
+        </p>
     </section>
 
+
     <section id="projects">
-      <h2>Projects</h2>
+        <h2>Projects</h2>
 
-      <div class="project">
-        <h3>Basic Honeypot for Cyber Attack Monitoring</h3>
-        <p>
-          A honeypot deployed in a Red Hat Linux environment to simulate a vulnerable service and observe
-          simulated attack behaviour. It recorded connection attempts, suspicious commands, and unauthorized
-          access patterns, providing insights into attacker techniques and network security monitoring.
-        </p>
-        <ul>
-          <li>Configured in a Red Hat Linux environment.</li>
-          <li>Captured and logged simulated malicious activity and access attempts.</li>
-          <li>Analysed logs to understand attacker behaviour and improve monitoring.</li>
-        </ul>
-      </div>
+        <div class="project">
+            <h3>Basic Honeypot for Cyber Attack Monitoring</h3>
+            <p>
+                A honeypot deployed in a Red Hat Linux environment to simulate a vulnerable service and observe
+                simulated attack behaviour. It recorded connection attempts, suspicious commands, and unauthorized
+                access patterns, providing insights into attacker techniques and network security monitoring.
+            </p>
+            <ul>
+                <li>Configured in a Red Hat Linux environment.</li>
+                <li>Captured and logged simulated malicious activity and access attempts.</li>
+                <li>Analysed logs to understand attacker behaviour and improve monitoring.</li>
+            </ul>
+        </div>
 
-      <!-- Add more projects as you go -->
+        <!-- Add more projects as you go -->
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming: C/C++, Python, JavaScript</li>
-        <li>Web: HTML, CSS, JavaScript</li>
-        <li>Networking: Cisco Packet Tracer networking simulations</li>
-        <li>Ethical Hacking / Cybersecurity Fundamentals</li>
-        <li>Tools: Git, GitHub, Linux CLI, VS Code</li>
-      </ul>
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming: C/C++, Python, JavaScript</li>
+            <li>Web: HTML, CSS, JavaScript</li>
+            <li>Networking: Cisco Packet Tracer networking simulations</li>
+            <li>Ethical Hacking / Cybersecurity Fundamentals</li>
+            <li>Tools: Git, GitHub, Linux CLI, VS Code</li>
+        </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:lucasjenzhi@gmail.com">lucasjenzhi@gmail.com</a></p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/lucas-joshua-702456320" target="_blank" rel="noopener noreferrer">
-          Lucas Joshua
-        </a>
-      </p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:lucasjenzhi@gmail.com">lucasjenzhi@gmail.com</a></p>
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/lucas-joshua-702456320" target="_blank" rel="noopener noreferrer">
+                Lucas Joshua
+            </a>
+        </p>
     </section>
-  </main>
+    </main>
 
-  <footer>
-    © <span id="year"></span> Lucas Joshua. Built with GitHub Pages.
-  </footer>
+    <footer>
+        © <span id="year"></span> Lucas Joshua. Built with GitHub Pages.
+    </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
